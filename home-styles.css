@@ -511,5 +511,12 @@ header > nav>i{
     main>div>ul{
         display: none;
     }
+    form>div{
+        display: block;
+        width: 100%;
+    }
+    form>div>div{
+        width: 100%;
+    }
 
 }
