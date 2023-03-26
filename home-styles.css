@@ -503,6 +503,7 @@ header > nav>i{
     }
     section:nth-of-type(4) > div >div {
         width: 100%;
+        margin: 0px 0px;
     }
     header>nav>i{
         visibility: visible;
