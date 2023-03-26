@@ -9,12 +9,17 @@
     --secondary-color: #facf0f;
     --aaaaa : rgb(0, 134, 120);
 }
+html{
+    font-family: 'Mohave', sans-serif;
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     margin: auto;
     background-color: var(--background-color);
 }
 header{
+    padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,38 +28,26 @@ header{
     top: 0;
     z-index: 100;
     background-color: var(--background-color);
+    box-sizing: border-box;
 }
 
-h1{
-    margin: 30px 80px;
-    color: rgb(0, 134, 120);
+header>a{
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 50px;
-    text-transform: uppercase;
-    line-height:1;
     color: var(--main-color);
 }
 div{
     width: 50%;
-    margin: 0 auto;
-    margin: 0 20px;
     margin: auto;
 }
 
-section:nth-of-type(1)>figure{
-    display: flex;
-    justify-content: center;
-    width: 40%;
-}
-
 ul>li>a:link{
-    color: gray;
+    color: var(--main-color);
     text-decoration: none;
-    
 }
 ul>li>a:visited{
-    color: gray;
+    color: var(--main-color);
 }
 ul>li>a:hover{
     color: var(--main-color-dark);
@@ -64,17 +57,13 @@ section:nth-of-type(1){
     display: flex;
     padding:0px 100px;
     box-sizing: border-box;
-    /* height: 85vh; */
     align-items: center;
     justify-content: center;
 }
-figure > img{
-    width: 100%;
+img{
+    width: 40%;
     background-color: rgb(228, 228, 228);
-    border-top-left-radius: 0;
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 0px;
+    border-radius: 100%;
     margin: 20px 0px;
     min-height: 500px;
     min-width: 500px;
@@ -93,36 +82,25 @@ section:nth-of-type(1) > div > p::first-letter{
     font-size: 2em;
     color: var(--main-color);
 }
-div > button{
-    padding:  12px 80px;
-    font-size: 18px;
-    border-radius: 50px;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin-right: 20px;
-    color:white;
-    border: 0.1px solid gainsboro;
-    background-color: var(--secondary-color);
-    color: whitesmoke;
-}
 
 button:hover{
     background-color: black;
     color: whitesmoke;
     cursor: pointer;
+    background-image: linear-gradient(to bottom, var(--main-color), gray);
 }
 h2{
     color: gray;
-    margin: 0;
-    border-bottom: 0.2px solid var(--main-color);
     margin: 20px 0px;
     font-weight: 400;
-    text-transform: uppercase;
-    font-size: 35px;
-    letter-spacing: 5px;
+    font-size: 40px;
+    color: darkcyan;
 }
-section:nth-of-type(1)  h2{
-    font-size: 45px;
+h1{
+    color: gray;
+    font-size: 55px;
+    font-weight: 600;
+    margin: 20px 0px;
 }
 footer{
     height: 350px;
@@ -145,19 +123,14 @@ footer > p{
     margin-right: 100px;
     font-size: 20px;
 }
-h1 > span{
+a > span{
     font-size: 18px;
     padding-left: 0px;
     font-weight: 900;  
     text-transform: uppercase;
-    letter-spacing: 5px;
-    border-top: 1px solid gray;
-    font-weight: 900;
-    color: var(--secondary-color);
-}
-html{
-    font-family: 'Mohave', sans-serif;
-    scroll-behavior: smooth;
+    letter-spacing: 3px;
+    border-top: 1px solid var(--secondary-color);
+    color: rgb(96, 94, 94);
 }
 
 p>span{
@@ -187,19 +160,20 @@ main>div>ul{
     padding: 20px 0px;
     border: 2px solid gainsboro;
     background-color: white;
+    border-left: 2px solid var(--main-color);
+    border-right: 2px solid var(--secondary-color);
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
 }
 main>div>ul>li{
     display: block;
-    padding: 15px 15px;
+    padding: 15px 10px;
 }
-i{
+div>ul>li>i{
     font-size: 30px;
     color: var(--main-color);
+    aspect-ratio: 1/1;
 }
-
-
-
-
 nav>ul > li > a {
     display: inline-block;
   }
@@ -208,33 +182,25 @@ nav>ul > li > a {
   /* The effect 
   -------------------------*/
   
-  nav>ul {
+nav>ul {
     text-align: center;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     overflow: hidden;
     text-decoration: none; 
-    margin-right: 80px;   
+    margin-right: 20px;   
     padding: 0px;
     margin-left: 0px;
     display: flex;
     justify-content: end;
     align-items: center;
-    border-radius: 100px;
     font-family: 'Roboto Condensed';
-    border: 2px solid gainsboro;  
-    border-top: 1px solid var(--main-color);
-    border-left: 1px solid var(--main-color);
-    /* border-bottom: 1px solid var(--secondary-color);
-    border-left: 1px solid var(--secondary-color); */
-    box-shadow: 5px 5px 5px gainsboro;
-    background-color: white;
-  }
+}
   
   nav>ul > li {
     height: 100%;
     display: inline;
-    padding: 0px 30px;
+    padding: 0px 15px;
     text-transform: uppercase;
   }
   
@@ -243,14 +209,12 @@ nav>ul > li > a {
     padding-top: 50px;
     margin-top: -50px;
     transition: 0.25s cubic-bezier(0, 0, .5, 1.4);
-    letter-spacing: 1px;
-    
+    letter-spacing: 1px;    
+    font-weight: 500;
   }
-  
   nav>ul > li > a:hover {
     margin-top: 0;
   }
-
 
   /* @supports (mix-blend-mode: difference) {
     main>div>ul {
@@ -276,7 +240,7 @@ section > ul > li{
     align-items: center;
     width: 90%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: rgba(128, 128, 128, 0.318);
     background-color: whitesmoke;
     box-shadow: 5px 5px 5px gainsboro;
@@ -298,18 +262,19 @@ section > ul > li > p:nth-of-type(1) {
     min-width: 100px;
     margin-left: -2px;
     border: 2px solid gainsboro;
-    background-color: var(--main-color);
     font-size: 16px;
     color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, var(--main-color), gray);
 }
 section > ul > li:nth-of-type(2n) {
     flex-direction: row-reverse;
 }
 section> ul > li:nth-of-type(2n) > p:nth-of-type(1){
-    background-color: rgb(0, 134, 120);
     margin-right: -2px;
     color: whitesmoke;
     background-color: var(--secondary-color);
+    background-image: linear-gradient(to bottom, var(--secondary-color), orange);
+    
 }
 section> ul > li:nth-of-type(2n){
     box-shadow: 0px 5px 5px gainsboro;
@@ -344,17 +309,20 @@ section:nth-of-type(4) > div >div{
 section:nth-of-type(4) > div >div>div{
     display: flex;
     align-items: start;
-    height: 5px;
+    height: 10px;
     background-color: gainsboro;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100%;
     border-radius: 100px;
+    margin-top: 25px;
 }
 section:nth-of-type(4) > div > div > div >div{
     height: 100%;
     margin-left: 0px;
     border-radius: 100px;
     background-color: var(--main-color);
+    background-image: linear-gradient(to bottom, var(--secondary-color), orange);
+    opacity: 0.8;
 }
 section:nth-of-type(4)>div > div > div:nth-of-type(1) > div{
     width: 70%;
@@ -379,13 +347,6 @@ div>h3{
     display: inline;
     color: gray;
 }
-div>i{
-    display: inline;
-    margin-right: 10px;
-    margin-bottom: 40px;
-    color: rgba(31, 27, 27, 0.989);
-    color: var(--secondary-color);
-}
 div>div>div>div>div{
     width: 100%;
     display: flex;
@@ -404,80 +365,9 @@ h4{
     font-family: 'Oswald', sans-serif;
     color: var(--main-color);
 }
-/* h4:before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-    background-color: var(--main-color);
-    transform: translateX(-50%) rotate(45deg);
-} */
 
 
 
-
-
-
-
-
-
-
-/* nav>ul {
-    border-radius: 0;
-    --border-size: 2px;
-    --border-angle: 0turn;
-
-    background-image: conic-gradient(from var(--border-angle), whitesmoke, whitesmoke 50%, whitesmoke), conic-gradient(from var(--border-angle), transparent 20%, goldenrod, var(--secondary-color));
-    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-animation: bg-spin 3s linear infinite;
-            animation: bg-spin 3s linear infinite;
-  }
-  @-webkit-keyframes bg-spin {
-    to {
-      --border-angle: 1turn;
-    }
-  }
-  @keyframes bg-spin {
-    to {
-      --border-angle: 1turn;
-    }
-  }
-  .box:hover {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-  
-  @property --border-angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
-  } */
-
-
-
-/* 
-figure>img{
-    background-color: gainsboro;
-    border-radius: 1000px;
-    border: 1px solid gray;
-    clip-path: circle();
-    
-} */
-
-
-
-
-/* body{
-    background-image: url(background3.avif);
-}
-main, header{
-    background-color: rgba(245, 245, 245,0.90);
-} */
 section:nth-of-type(5){
     padding-bottom: 200px;
 }
@@ -526,11 +416,99 @@ input, textarea{
 }
 
 input[type='submit']{
-    background-color: var(--main-color);
     border: none;
     font-size: 20px;
     color: white;
+    border-right: 10px solid gainsboro;
+    background-color: darkcyan;
+    width: 20%;
+    margin-right: 10%;
+}
+input[type='submit']:hover{
+    background-color: rgb(1, 106, 106);
+    border-right: 10px solid var(--main-color);
+    cursor: pointer;
+}
+
+
+header>nav{
+    display: flex;
+}
+
+button{
+    /* background: linear-gradient(to bottom, orangered, red); */
+    background-color: darkcyan;
+    color: white;
+    border-radius: 100px;
+    padding: 0px 30px;
+    font-size: 16px;
+    border: none;
+}
+
+header li>ul{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 5px 20px;
+    border: 1px solid black;
+}
+header li:nth-of-type(2):hover >ul{
+    display:block;
+    top:75px;
+}
+header li>ul>li + li{
+    border-top: 1px solid gainsboro;
 }
 
 
 
+
+
+
+
+
+
+
+form>div{
+    display: flex;
+    width: 89%;
+    box-sizing: border-box;
+}
+
+
+
+header > nav>i{
+    visibility: hidden;
+    color: darkcyan;
+    font-size: 40px;
+}
+@media screen and (max-width: 800px){
+    section:nth-of-type(1){
+        display: block;
+        padding: 10%;
+    }
+    section:nth-of-type(1)>div{
+        width: 100%;
+    }
+    header>nav>ul, nav> button{
+        display: none;
+    }
+    img{
+        width: 100%;
+        min-width: 100px;
+        min-height: 100px;
+    }
+    section:nth-of-type(4) > div {
+        display: block;
+    }
+    section:nth-of-type(4) > div >div {
+        width: 100%;
+    }
+    header>nav>i{
+        visibility: visible;
+    }
+    main>div>ul{
+        display: none;
+    }
+
+}
