@@ -17,6 +17,7 @@ body{
     width: 100%;
     margin: auto;
     background-color: var(--background-color);
+    background-color: white;
 }
 header{
     padding: 30px 50px;
@@ -29,6 +30,7 @@ header{
     z-index: 100;
     background-color: var(--background-color);
     box-sizing: border-box;
+    background-color: white;
 }
 
 header>a{
@@ -47,10 +49,10 @@ ul>li>a:link{
     text-decoration: none;
 }
 ul>li>a:visited{
-    color: var(--main-color);
+    color: gray;
 }
 ul>li>a:hover{
-    color: var(--main-color-dark);
+    color: var(--secondary-color);
 }
 section:nth-of-type(1){
     width: 100%;
@@ -60,14 +62,16 @@ section:nth-of-type(1){
     align-items: center;
     justify-content: center;
 }
-img{
+section>img{
     width: 40%;
     background-color: rgb(228, 228, 228);
+    background-color: rgb(240, 240, 240);
     border-radius: 100%;
     margin: 20px 0px;
-    min-height: 500px;
-    min-width: 500px;
+    /* min-height: 500px;
+    min-width: 500px; */
     box-shadow: 5px 5px 15px 2px rgb(210, 210, 210);
+    background-color: white;
 }
 p{
     margin: 20px 0px;
@@ -80,7 +84,6 @@ section > div > p{
 }
 section:nth-of-type(1) > div > p::first-letter{
     font-size: 2em;
-    color: var(--main-color);
 }
 
 button:hover{
@@ -92,14 +95,14 @@ button:hover{
 h2{
     color: gray;
     margin: 20px 0px;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 40px;
     color: darkcyan;
 }
 h1{
     color: gray;
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 300;
     margin: 20px 0px;
 }
 footer{
@@ -115,6 +118,7 @@ footer{
     background-color: rgb(60, 63, 79);
     justify-content: center;
     z-index: -1;
+    background-color: black;
 }
 
 footer > p{
@@ -128,7 +132,7 @@ a > span{
     padding-left: 0px;
     font-weight: 900;  
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     border-top: 1px solid var(--secondary-color);
     color: rgb(96, 94, 94);
 }
@@ -160,10 +164,10 @@ main>div>ul{
     padding: 20px 0px;
     border: 2px solid gainsboro;
     background-color: white;
-    border-left: 2px solid var(--main-color);
-    border-right: 2px solid var(--secondary-color);
-    border-top: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
 }
 main>div>ul>li{
     display: block;
@@ -194,7 +198,8 @@ nav>ul {
     display: flex;
     justify-content: end;
     align-items: center;
-    font-family: 'Roboto Condensed';
+    /* font-family: 'Roboto Condensed'; */
+    font-family: 'Titillium Web', sans-serif;
 }
   
   nav>ul > li {
@@ -211,6 +216,8 @@ nav>ul {
     transition: 0.25s cubic-bezier(0, 0, .5, 1.4);
     letter-spacing: 1px;    
     font-weight: 500;
+    font-size: 16px;
+    color: gray;
   }
   nav>ul > li > a:hover {
     margin-top: 0;
@@ -231,7 +238,7 @@ section > h2{
     margin-bottom: 50px;
 }
 
-section > ul > li{
+section:nth-of-type(3) > ul > li, section:nth-of-type(2) > ul > li{
     font-size: 20px;
     border: 2px solid gainsboro;
     border-radius: 100px;
@@ -243,14 +250,15 @@ section > ul > li{
     margin-bottom: 40px;
     color: rgba(128, 128, 128, 0.318);
     background-color: whitesmoke;
-    box-shadow: 5px 5px 5px gainsboro;
+    box-shadow: 5px 5px 5px whitesmoke;
+    background-color: white;
+    border: 0.1px solid gainsboro;
 }
 
 section > ul > li > p:nth-of-type(1) {
     background-color: var(--main-color);
-    border-radius: 200px;
-    width: 100px;
-    height: 100px;
+    border-radius: 1000px;
+    aspect-ratio: 1/1;
     text-align: center;
     margin-right: 30px;
     padding: 10px;
@@ -261,7 +269,7 @@ section > ul > li > p:nth-of-type(1) {
     font-size: 25px;
     min-width: 100px;
     margin-left: -2px;
-    border: 2px solid gainsboro;
+    border: 0.2px solid gainsboro;
     font-size: 16px;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to bottom, var(--main-color), gray);
@@ -277,11 +285,12 @@ section> ul > li:nth-of-type(2n) > p:nth-of-type(1){
     
 }
 section> ul > li:nth-of-type(2n){
-    box-shadow: 0px 5px 5px gainsboro;
+    box-shadow: 0px 5px 5px whitesmoke;
 }
 section > ul > li > p:nth-of-type(2){
     margin: 0px 20px;
     margin: auto;
+    color: rgba(163, 162, 162, 0.566);
 }
 
 
@@ -298,7 +307,6 @@ section > ul > li > p:nth-of-type(2){
 
 section:nth-of-type(4) > div {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 90%;
 }
@@ -324,28 +332,48 @@ section:nth-of-type(4) > div > div > div >div{
     background-image: linear-gradient(to bottom, var(--secondary-color), orange);
     opacity: 0.8;
 }
-section:nth-of-type(4)>div > div > div:nth-of-type(1) > div{
+section:nth-of-type(4)>div > div:nth-of-type(1) > div:nth-of-type(1) > div{
     width: 70%;
 }
-section:nth-of-type(4)>div >  div > div:nth-of-type(2) > div{
+section:nth-of-type(4)>div >  div:nth-of-type(1) > div:nth-of-type(2) > div{
     width: 60%;
 }
-section:nth-of-type(4)>div > div > div:nth-of-type(3) > div{
+section:nth-of-type(4)>div > div:nth-of-type(1) > div:nth-of-type(3) > div{
     width: 50%;
 }
-section:nth-of-type(4)>div > div > div:nth-of-type(4) > div{
+section:nth-of-type(4)>div > div:nth-of-type(1) > div:nth-of-type(4) > div{
     width: 90%;
 }
-section:nth-of-type(4)>div > div > div:nth-of-type(5) > div{
+section:nth-of-type(4)>div > div:nth-of-type(1) > div:nth-of-type(5) > div{
     width: 70%;
 }
-div>h3{
+section:nth-of-type(4)>div > div:nth-of-type(1) > div:nth-of-type(6) > div{
+    width: 80%;
+}
+section:nth-of-type(4)>div > div:nth-of-type(2) > div:nth-of-type(1) > div{
+    width: 70%;
+}
+section:nth-of-type(4)>div > div:nth-of-type(2) > div:nth-of-type(2) > div{
+    width: 90%;
+}
+section:nth-of-type(4)>div > div:nth-of-type(2) > div:nth-of-type(3) > div{
+    width: 70%;
+}
+section:nth-of-type(4)>div > div:nth-of-type(2) > div:nth-of-type(4) > div{
+    width: 90%;
+}
+
+section:nth-of-type(4) div>p{
     font-size: 25px;
     font-weight: 100;
     margin: 5px 0px;
     text-transform: uppercase;
     display: inline;
     color: gray;
+}
+section:nth-of-type(4) div>h3{
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 div>div>div>div>div{
     width: 100%;
@@ -368,7 +396,7 @@ h4{
 
 
 
-section:nth-of-type(5){
+section:nth-of-type(6){
     padding-bottom: 200px;
 }
 
@@ -401,6 +429,7 @@ textarea{
     min-height: 40px;
     max-height: 300px;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
 label{
@@ -410,23 +439,27 @@ label{
     margin: 5px auto;
 }
 input, textarea{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: 1px solid gainsboro;
-    border-right: 10px solid gainsboro;
+    border-right: 5px solid gainsboro;
+    font-size: 25px;
+    color: gray;
+    padding: 0px 20px;
+}
+input{
+    border-radius: 100px;
 }
 
 input[type='submit']{
     border: none;
     font-size: 20px;
     color: white;
-    border-right: 10px solid gainsboro;
     background-color: darkcyan;
     width: 20%;
-    margin-right: 10%;
+    margin-left: 10%;
 }
 input[type='submit']:hover{
     background-color: rgb(1, 106, 106);
-    border-right: 10px solid var(--main-color);
     cursor: pointer;
 }
 
@@ -439,10 +472,11 @@ button{
     /* background: linear-gradient(to bottom, orangered, red); */
     background-color: darkcyan;
     color: white;
-    border-radius: 100px;
+    border-radius: 500px;
     padding: 0px 30px;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
+    text-transform: uppercase;
 }
 
 header li>ul{
@@ -450,7 +484,7 @@ header li>ul{
     position: absolute;
     background-color: white;
     padding: 5px 20px;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
 }
 header li:nth-of-type(2):hover >ul{
     display:block;
@@ -478,25 +512,36 @@ form>div{
 
 
 header > nav>i{
-    visibility: hidden;
     color: darkcyan;
     font-size: 40px;
+    display: none !important;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1024px){
+    section:nth-of-type(5) > ul{
+        grid-template-columns: 1fr 1fr !important;
+    }
+    section:nth-of-type(1) img{
+        width: 100%;
+    }
+    section:nth-of-type(1) div{
+        width: 100%;
+    }
+    section:nth-of-type(1) div h2{
+        margin: auto !important;
+    }
+    section:nth-of-type(1) div p{
+        margin: auto !important;
+    }
     section:nth-of-type(1){
         display: block;
-        padding: 10%;
     }
-    section:nth-of-type(1)>div{
-        width: 100%;
+    section{
+        padding: 50px !important;
     }
+}
+@media screen and (max-width: 800px){
     header>nav>ul, nav> button{
         display: none;
-    }
-    img{
-        width: 100%;
-        min-width: 100px;
-        min-height: 100px;
     }
     section:nth-of-type(4) > div {
         display: block;
@@ -506,7 +551,7 @@ header > nav>i{
         margin: 0px 0px;
     }
     header>nav>i{
-        visibility: visible;
+        display: block !important;
     }
     main>div>ul{
         display: none;
@@ -521,4 +566,54 @@ header > nav>i{
     h1{
         font-size: 40px;
     }
+    section:nth-of-type(5) > ul{
+        grid-template-columns: 1fr !important;
+        display: none;
+    }
 }
+
+
+
+
+
+section li img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+section:nth-of-type(5) li{
+    border: 1px solid whitesmoke;
+    border-radius: 0px;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px whitesmoke;
+}
+section:nth-of-type(5)> ul > li:nth-of-type(2n){
+    box-shadow: 5px 5px 5px whitesmoke;
+}
+section:nth-of-type(5) > ul{
+    display: grid;
+    box-sizing: border-box;
+    gap: 70px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: auto;
+
+}
+figcaption{
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: gray;
+}
+
+
+
+
+/* section:nth-of-type(5) li:hover{
+    width: 101%;
+}
+ */
+
+
